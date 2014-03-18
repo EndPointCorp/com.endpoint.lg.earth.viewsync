@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<project type="activity" builder="java">
+    <name>Google Earth ViewSync Sniffer</name>
+    <description>
+An activity for sniffing Earth's viewsync datagrams and publishing the current location to a route.
+    </description>
+
+    <identifyingName>com.endpoint.lg.earth.viewsync</identifyingName>
+    <version>1.0.0.dev</version>
+</project>
