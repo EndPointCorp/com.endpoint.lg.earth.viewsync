@@ -8,7 +8,7 @@ import com.google.common.eventbus.EventBus;
 import com.google.common.eventbus.Subscribe;
 
 import interactivespaces.activity.binary.NativeActivityRunnerFactory;
-import interactivespaces.activity.binary.NativeApplicationRunner;
+import interactivespaces.util.process.NativeApplicationRunner;
 import interactivespaces.activity.impl.ros.BaseRoutableRosActivity;
 import interactivespaces.service.comm.network.client.UdpBroadcastClientNetworkCommunicationEndpoint;
 import interactivespaces.service.comm.network.client.UdpClientNetworkCommunicationEndpointService;
@@ -85,8 +85,8 @@ public class EarthViewsyncActivity extends BaseRoutableRosActivity {
         String.format("UDP4-RECV:%d,reuseaddr UDP4-DATAGRAM:127.0.0.1:%d", viewSyncPort,
             viewSyncListenerPort);
 
-    socatConfig.put(NativeApplicationRunner.ACTIVITYNAME, socatPath);
-    socatConfig.put(NativeApplicationRunner.FLAGS, socatFlags);
+    socatConfig.put(NativeApplicationRunner.EXECUTABLE_PATHNAME, socatPath);
+    socatConfig.put(NativeApplicationRunner.EXECUTABLE_FLAGS, socatFlags);
 
     socatRunner.configure(socatConfig);
     addManagedResource(socatRunner);
