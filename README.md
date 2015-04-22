@@ -6,7 +6,7 @@ Java package: com.endpoint.lg.earth.viewsync
 Liquid Galaxy Interactive Spaces activity for sniffing Earth's viewsync datagrams and publishing the current location to a route.
 
 
-Copyright (C) 2015 Google Inc.
+Copyright (C) 2015 Google Inc.  
 Copyright (C) 2015 End Point Corporation
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not
