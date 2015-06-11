@@ -82,7 +82,7 @@ public class EarthViewsyncActivity extends BaseRoutableRosActivity {
 
     UdpClientNetworkCommunicationEndpointService udpCommService =
         getSpaceEnvironment().getServiceRegistry().getService(
-            UdpClientNetworkCommunicationEndpointService.NAME);
+            UdpClientNetworkCommunicationEndpointService.SERVICE_NAME);
 
     UdpBroadcastClientNetworkCommunicationEndpoint udpBcastClient =
         udpCommService.newBroadcastClient(viewSyncListenerPort, getLog());
@@ -91,7 +91,7 @@ public class EarthViewsyncActivity extends BaseRoutableRosActivity {
 
     addManagedResource(udpBcastClient);
 
-    NativeActivityRunnerFactory runnerFactory = getController().getNativeActivityRunnerFactory();
+    NativeActivityRunnerFactory runnerFactory = getActivityRuntime().getNativeActivityRunnerFactory();
     NativeApplicationRunner socatRunner = runnerFactory.newPlatformNativeActivityRunner(getLog());
 
     Map<String, Object> socatConfig = Maps.newHashMap();
