@@ -12,6 +12,9 @@ An activity for sniffing Earth's viewsync datagrams and publishing the current l
         <name>comEndpointLgEarthViewsync</name>
         <class>com.endpoint.lg.earth.viewsync.EarthViewsyncActivity</class>
         <configuration>
+            <property name="space.activity.group">
+                <value>generic</value>
+            </property>
             <property name="space.activity.log.level">
                 <value>info</value>
             </property>
